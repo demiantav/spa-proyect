@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+.container-nav{
+
+    background-color: beige;
+    padding: 1rem;
+    width: 100%;
+    position: sticky;
+    top: 0;
+
+    & .logo-marvel{
+
+    
+        width: clamp(min(130px,100%),40vw,160px);
+        
+    }
+
+
+}
+
+.container-main{
+
+    background-color: #0f0909;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.container-form{
+   
+    gap: 1.2rem;
+
+}
+
+.container-form form{
+
+    gap: 1.1rem;
+}
+
+.container-form, form {
+
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.container-characters{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px,100%),1fr));
+    gap: 4rem;
+    width: 100%;
+    place-items: center;
+    grid-auto-flow:dense;
+    align-items:start;
+    padding: 1.5rem;
+}
+
+.marvel-img{
+
+    width: 100%;
+}
+
+input[type=submit]{
+
+    background-color: red;
+    color: white;
+    width: min(200px,30%);
+    padding: .56rem;
+    align-self: center;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+.jelly {
+    --uib-size: 50px;
+    --uib-speed: .9s;
+    --uib-color: red;
+  
+    position: relative;
+    height: calc(var(--uib-size) / 2);
+    width: var(--uib-size);
+    filter: url('#uib-jelly-ooze');
+    animation: rotate calc(var(--uib-speed) * 2) linear infinite;
+  }
+  
+  .jelly::before,
+  .jelly::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    width: 50%;
+    height: 100%;
+    background: var(--uib-color);
+    border-radius: 100%;
+  }
+  
+  .jelly::before {
+    animation: shift-left var(--uib-speed) ease infinite;
+  }
+  
+  .jelly::after {
+    animation: shift-right var(--uib-speed) ease infinite;
+  }
+  
+  .jelly-maker {
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+  
+  @keyframes rotate {
+    0%,
+    49.999%,
+    100% {
+      transform: none;
+    }
+  
+    50%,
+    99.999% {
+      transform: rotate(90deg);
+    }
+  }
+  
+  @keyframes shift-left {
+    0%,
+    100% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: scale(0.65) translateX(-75%);
+    }
+  }
+  
+  @keyframes shift-right {
+    0%,
+    100% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: scale(0.65) translateX(75%);
+    }
+  }
+  
+
+
+
